@@ -2,7 +2,7 @@
   "title": "Arrow Keys",
   "rules": [
     {
-      "description": "Change left_control+hjkl to arrow keys",
+      "description": "Change mega+hjkl to arrow keys",
       "manipulators": [
         {
           "type": "basic",
@@ -10,7 +10,10 @@
             "key_code": "h",
             "modifiers": {
               "mandatory": [
-                "left_control"
+                "left_control",
+                "left_command",
+                "left_shift",
+                "left_option"
               ],
               "optional": [
                 "any"
@@ -29,7 +32,10 @@
             "key_code": "j",
             "modifiers": {
               "mandatory": [
-                "left_control"
+                "left_control",
+                "left_command",
+                "left_shift",
+                "left_option"
               ],
               "optional": [
                 "any"
@@ -48,7 +54,10 @@
             "key_code": "k",
             "modifiers": {
               "mandatory": [
-                "left_control"
+                "left_control",
+                "left_command",
+                "left_shift",
+                "left_option"
               ],
               "optional": [
                 "any"
@@ -67,7 +76,10 @@
             "key_code": "l",
             "modifiers": {
               "mandatory": [
-                "left_control"
+                "left_control",
+                "left_command",
+                "left_shift",
+                "left_option"
               ],
               "optional": [
                 "any"

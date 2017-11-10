@@ -1,0 +1,28 @@
+class <%= name %>Models {
+  static Something = class {
+    static Request = class {
+      constructor(userID) {
+        this.userID = userID
+      }
+    }
+
+    static Response = class {
+      constructor(someModel) {
+        this.someModel = someModel
+      }
+    }
+
+    static ViewModel = class {
+      static DisplayedModel = class {
+        constructor(name, age) {
+          this.name = name
+          this.age = age
+        }
+      }
+
+      constructor(displayedModels) {
+        this.displayedModels = displayedModels
+      }
+    }
+  }
+}

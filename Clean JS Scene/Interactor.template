@@ -1,0 +1,18 @@
+class <%= name %>Interactor {
+  constructor() {
+    // Data model dependencies
+    this.someModel = {}
+
+    // VIP dependencies
+    this.presenter = null
+    this.worker = new <%= name %>Worker()
+  }
+
+  fetchSomething(request) {
+    let remoteModel = { id: 123, name: 'Test User', age: 44 }
+    this.someModel = remoteModel
+    let response = new <%= name %>Models.Something.Response(remoteModel)
+
+    this.presenter.presentSomething(response)
+  }
+}

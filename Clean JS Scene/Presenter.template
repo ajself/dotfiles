@@ -1,0 +1,11 @@
+class <%= name %>Presenter {
+  constructor() {
+    this.viewController = null
+  }
+
+  presentSomething(response) {
+    let viewModel = new <%= name %>Models.Something.ViewModel.DisplayedModel(response.name, response.age)
+
+    this.viewController.displaySomething(viewModel)
+  }
+}

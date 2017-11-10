@@ -1,0 +1,23 @@
+class <%= name %>View extends View {
+  // Properties and initialization
+
+  constructor() {
+    super()
+
+    this.templateName = '<%= name.toLowerCase() %>.html'
+  }
+
+  // Object lifecycle
+
+  // Operations
+
+  attachTargetAction() {
+
+  }
+
+  removeTargetAction() {
+
+  }
+
+  // Public
+}

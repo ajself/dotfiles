@@ -1,0 +1,53 @@
+class <%= name %>ViewController extends ViewController {
+  // Properties and initialization
+
+  constructor() {
+    super()
+
+    this.routePath = '<%= name.toLowerCase()  %>'
+    this.templateName = '<%= name.toLowerCase() %>.html'
+
+    this.interactor = {}
+    this.router = {}
+
+    this.setup()
+  }
+
+  // VIP configuration
+
+  setup() {
+    let viewController = this
+    let interactor = new <%= name %>Interactor()
+    let presenter = new <%= name %>Presenter()
+
+    viewController.interactor = interactor
+    interactor.presenter = presenter
+    presenter.viewController = viewController
+  }
+
+  // Object lifecycle
+
+  viewWillAppear() {
+    let request = new <%= name %>Models.Something.Request(123)
+
+    this.interactor.fetchSomething(request)
+  }
+
+  // VIP Conformance
+
+  displaySomething(viewModel) {
+    // $('#something').text(viewModel.name + '' + viewModel.age)
+  }
+
+  // Operations
+
+  attachTargetAction() {
+
+  }
+
+  removeTargetAction() {
+
+  }
+
+  // Public
+}

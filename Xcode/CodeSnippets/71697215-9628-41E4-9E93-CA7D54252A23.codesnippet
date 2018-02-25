@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>initicoredata</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>  lazy var managedObjectContext: NSManagedObjectContext = {
+    guard let modelURL = NSBundle.mainBundle().URLForResource("&lt;#Resource Name#&gt;", withExtension: "momd") else {
+      fatalError("Could not find  data model in app bundle")
+    }
+
+    guard let model = NSManagedObjectModel(contentsOfURL: modelURL) else {
+      fatalError("Error initializing model from: \(modelURL)")
+    }
+
+    let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+    let documentsDirectory = urls[0]
+    let storeURL = documentsDirectory.URLByAppendingPathComponent("&lt;#Data Store Name#&gt;.sqlite")
+
+    do {
+      let coordinator = NSPersistentStoreCoordinator(managedObjectModel: model)
+
+      try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil)
+
+      let context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+
+      context.persistentStoreCoordinator = coordinator
+
+      return context
+    } catch {
+      fatalError("Error adding persistent store at \(storeURL): \(error)")
+    }
+  }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>71697215-9628-41E4-9E93-CA7D54252A23</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Load Core Data context</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Initialize Core Data</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

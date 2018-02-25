@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ibsetup</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>var view: UIView!
+
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setup()
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    setup()
+  }
+
+  func setup() {
+    view = loadViewFromNib()
+    view.frame = self.bounds
+    view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+    addSubview(view)
+  }
+
+  func loadViewFromNib() -&gt; UIView {
+    let bundle = NSBundle(forClass: self.dynamicType)
+    let nib = UINib(nibName: "WeatherGrid", bundle: bundle)
+    let view = nib.instantiateWithOwner(self, options: nil).first! as! UIView
+    return view
+  }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FAFBB28F-2310-4E5B-BA93-612B957CD814</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Skeleton to get custom UIView to be inspectable in IB</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>IBDesignable Setup</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

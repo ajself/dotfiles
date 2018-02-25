@@ -8,6 +8,28 @@
 		<array>
 			<dict>
 				<key>Action</key>
+				<string>performAlertEvent:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
+				<string>A06F4373-0E31-4D19-8739-BB54816E3632-29353-00001ABE60BC646D</string>
+				<key>Group</key>
+				<string>Xcode Menu</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEKit.MenuDefinition.Xcode</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string>^~$@</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Behaviors</string>
+				<key>Title</key>
+				<string>Home</string>
+			</dict>
+			<dict>
+				<key>Action</key>
 				<string>toggleDebuggerVisibility:</string>
 				<key>Alternate</key>
 				<string>NO</string>
